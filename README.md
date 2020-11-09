@@ -124,3 +124,25 @@ text 태그
 - tr(table row)
 - td(tag define) 
 - th(tag header)
+
+# 이미지
+
+- img 태그는 단일 태그/인라인 속성
+  - <img ser = "이미지url(또는 파일의 경로)"/>
+  - src - 이미지 url, 파일 경로
+  - alt - 대체 문구(alternative)
+  - geight - 높이
+  - width - 너비
+
+# a 태그
+
+<a href = "링크">버튼 이름</a>
+
+속성
+- href: 주소
+- target: 링크가 표시 될 방법
+- download: 링크의 리소스를 다운로드한다.
+
+target 속성
+- _blank ->새로운 창을 열어서하는 것
+- - self: 기본 값
