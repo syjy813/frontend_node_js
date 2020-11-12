@@ -12,10 +12,16 @@
         var btn = document.getElementById('btn-alert');
         console.log(btn);
 
-        
+        //마우스 클릭 시 발새하는 이벤트에 대한 핸들러
         btn.onclick = () => {
-            alert('마우스 클림됨.');
+            alert('마우스 클릭됨.');
         };
+
+        btn.addEventListener('click', onClickHeadler);
+        function onClickHandler() {
+            alert('마우스 클릭!!');
+        }
+
     </script>
 
 
