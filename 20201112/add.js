@@ -82,3 +82,25 @@ const obj55 = {
 for(p in obj55) {
     console.log(obj55[p])
 };
+
+
+function test(a, b) {
+    return `${a}와 ${b}의 합은 ${a+b}입니다.`
+}
+
+const resultMessage = test(1,2);
+console.log(resultMessage);
+
+const a = test
+const resultMessage = a(1,2);
+console.log(resultMessage);
+
+
+const obj = {
+    name: 'haejun',
+    say: function() {
+        console.log(`my name is ${this.name}`);
+    }
+}
+
+obj.say()

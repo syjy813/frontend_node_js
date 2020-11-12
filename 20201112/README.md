@@ -10,6 +10,8 @@
 노드
 -> 서버 사이드에서 자바스크립트를 사용하기 위해 V8 엔진을 사용하여 만듬
 
+
+
 # 2. 용어 정리
 
 - DOM: Document Object Model
@@ -210,13 +212,81 @@ if(obj != null) {
 obj?.size();
 
 
+# 6. 함수
+
+함수 정의하는 방법
+
+```javascript
+//이름이 있는 함수
+function 함수이름(매개변수) {
+    //코드
+}
+
+//이름이 없는 함수
+(매개변수) => {
+    //코드
+}
+```
+
+자바 함수(매서드)와 다른 점
+- 식별자에 할당 가능(변수에 저장하는 것 처럼)
+- 자바와 달리 인터페이스 선언이 필요 없음.
+
+이름이 있는 함수 만들기 예제
+```javascript
+function test(a,b) {
+    return `${a}와 ${b}의 합은 ${a+b}입니다.`
+}
+onst resultMessage = test(1,2);
+console.log(resultMessage);
+```
+
+이름이 없는 함수 만들기 예제
+```javascript
+const test = (a,b) => `${a}와 ${b}의 합은 ${a+b}입니다.`
+console.log(resultMessage)
+```
+
+람다는 어디에 필요할까?
+- 콜백함수
+- 핸들러
 
 
+## 6.1. 디폴트 함수 파라미터
+
+함수의 파라미터에 기본 값을 지정할 수 있음..
+
+```javascript
+finction teste(a,b = 3) {
+    return template = `${a}와 ${b}의 합은 ${a+b}입니다.`
+}
+
+console.log(test(1));
+console.log(test(1,2));
+```
+익명함수에서도 동일하게 사용 가능
+```javascript
+(a,b=3) => `${a}와 ${b}의 합은 ${a+b}입니다.`
+```
 
 
+## 6.2. 매서드..
+
+객체 리터럴에 포함된 함수를 메서드라고 구분해서 부름..
+
+```javascript
+const obj = {
+    say: function() {
+        //코드
+    }
+    fn: () => {
+        //코드
+    }
+}
+```
 
 
+## 6.3. 메서드의 this
 
-
-
+this는 읽기 전용 값. 
 
