@@ -7,12 +7,16 @@ const PORT = 6600   // 포트 번호
 app.use(express.static('./static'))
 
 // 더미 데이터
-const data = {
-    id: '124125125',
-    name: 'Chiho Won',
-    myData: [1, 2, 3]
-}
+
+
 app.get('/data', (req, res) => {
+    const data = {
+        id:'124125125',
+        name: 'Chiho Won',
+        myData: [1, 2, 3,],
+        timestamp: new Date(),
+    }
+    
     // data 객체를 json으로 서빙해줌
     // JSON: Javascript Object Notation
     res.json(data)
