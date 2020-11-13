@@ -127,12 +127,79 @@ console.log('블록 이전에 호출')
     console.log(x)
     {
         console.log('블록 내부 2에서 호출됨')
-        const x = 5
+        const y = 5
         console.log(y)
     }
     console.log(y)
 }
 console.log(x)
 ```
+```javascript
+// 블록 레벨에서의 마스킹 현상 발생
+console.log('블록 이전에 호출')
+{
+    const x = 10
+    const block1 = '블록1이란다'
+    console.log(x)
+    {
+        const x = '다른타입의 값'
+        console.log(x)
+        console.log(block1)
+    }
+}
+```
+- 스코프는 계층 구조
+- 같은 이름의 식별자를 사용하면 바깥 스코프의 동일한 이름을 사용하는 식별자가 가려짐(접근할 방법이 전혀 없음)
+  - 변수 마스킹..
+  - 
 
+```javacsript
+function outer() {
+    const name = '바깥임'
+    function showName() {
+        const n = '안쪽 데이터'
+        console.loe(`바깥: ${name}, 안: ${n}`)
+    }
+    showName()
+}
+outer()
+```
 
+- outter 내부 스코프
+  - name 상수
+  - showName 함수
+- showName(클로저)은 자신의 외부에 해당하는 outer 함수의 name 상수에 접근 가능
+
+위의 코드 수정
+```javascript
+const dd= 'dd'
+function outer() {
+    const name = '바깥임' // 유효 범위
+    function showName() { // 클로저
+        const n = '안쪽 데이터'
+        console.log(`바깥: ${name}, 안: ${n}`)
+    }
+    return showName
+}
+const f1 = outer()
+f1()
+```
+일반적으로는 함수 호출이 완료되고 나면 내부 변수가 정리되서 사용할 수 없다고 생각하는 게 일반적..
+하지만 자바스크립트의 경우에는 클로저(closure)가 형성됨
+
+클로저
+- 함수와 함수가 선언된 렉시컬 환경
+- 렉시컬 환경은 클로저가 생성된 상시에 유효 범위 내에 있는 모든 지역 변수로 구성됨
+
+기억할 것
+- 클로저가 생성된 위치에서 유효했던 범위(환경) 들을 기억하고 있다는 것
+
+## 3.5. IIFE(immediately Invoked Fuction Expression) - 즉시 실행 함수
+
+```javascript
+(function (x) {
+    console.log(`파라미터 ${x}`)
+}(5)
+```
+
+# 4. 노드

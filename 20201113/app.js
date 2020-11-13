@@ -1,9 +1,14 @@
-function seyHelloTo(name) {
-    const message = `Hello ${name}!`
-    return function() {
-        console.log(message)
+function print() {
+    let count = 1;
+    function driver() {
+        console.log(`${count++}번 호출됨`)
     }
+    return driver
 }
 
-const hello = seyHelloTo('haejun')
-hello()
+const run = print()
+run()
+run()
+run()
+run()
+run()
