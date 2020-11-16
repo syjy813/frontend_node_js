@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>layout tutorial</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background-image: 
+            url('https://i.redd.it/mf17aoaqnbj21.png'),
+            radial-gradient(#ccc,#111);
+            background-blend-mode: multiply;
+            background-attachment: fixed;
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: white;
+        }
+
+        h1, p, blockquote {
+            margin: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1 class="primary-title">제목같은거 여기에</h1>
+            <p>서브타이틀</p>
+            <p>Mon Nov 16 2020 14:03:54 GMT+0900 </p>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div class="container article-spacing">
+                <h1>👀제목1</h1>
+                <p>내용</p>
+                <blockquote>
+                    <p>인용구</p>
+                    <p>인용구다</p>
+                </blockquote>
+                <p>여전히 내용</p>
+                <h1>😜제목2</h1>
+                <p>어쩔..</p>
+                <div class="img-box">
+                    <img src="/path/to/image"/>
+                    <p>[이미지 설명]</p>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="container info-container">
+                <div class="info-container-item">
+                    <h1>제목1</h1>
+                    <p>내용1</p>
+                </div>
+                <div class="info-container-item">
+                    <h1>제목2</h1>
+                    <p>내용2</p>
+                </div>
+                <div class="info-container-item">
+                    <h1>제목3</h1>
+                    <p>내용3</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
