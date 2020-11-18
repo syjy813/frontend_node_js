@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>연습</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+        }
+        .main-container {
+            display: flex;
+            height: 230px;
+            justify-content: space-between;
+        }
+        div {
+            border: 1px solid gray;
+            margin: 5px;
+        }
+
+        .main-container > .article { 
+            height: 100%;
+            width:50%;
+            float: left;
+        }
+
+        .side-bar {
+            height: 100%;
+            width: 20%;
+            float: right;
+        }
+        .zone {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="hero">
+                <h1>이곳은 헤더</h1>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <div class="article">
+                <h1>본문</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap
+                    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                    the
+                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing
+                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div class="side-bar">
+                <ul>
+                    <h1>사이드 바</h1>
+                    <li>왜이리시끄러운것이냐</li>
+                    <li>왜이리시끄러운것이냐</li>
+                    <li>왜이리시끄러운것이냐</li>
+                </ul>
+            </div>
+            <div class="side-bar double">
+                <ul>
+                    <h1>사이드 바</h1>
+                    <li>왜이리시끄러운것이냐</li>
+                    <li>왜이리시끄러운것이냐</li>
+                    <li>왜이리시끄러운것이냐</li>
+                    <li>질알</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <div class="zone">
+                <h1>푸터</h1>
+                <p>이것은 발바닥이요</p>
+            </div>
+
+
+        </footer>
+    </div>
+</body>
+
+</html>
