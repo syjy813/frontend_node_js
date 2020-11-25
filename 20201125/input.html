@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>제목임</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" value="사과" name="fruit"> 사과<br/>
+    <input type="checkbox" value="오렌지" name="fruit"> 오렌지<br/>
+    <input type="checkbox" value="딸기" name="fruit"> 포도<br/>
+    <input type="checkbox" value="포도" name="fruit"> 아보카도<br/>
+    <hr>
+    <button id="print">출력!</button>
+    <h2 id='list'></h2>
+    <script>
+        const p = document.getElementById('print');
+        p.addEventListener('cleck', () => {
+            const chks = document.getElementsByName('fruit');
+            const len = chks.length;
+            const list = document.getElementById('list');
+            let s = '';
+            for(let i = 0;i<len;i++) {
+                if(chks[i].checked) {
+                    console.log(chks[i].value);
+
+                    s +=chks[i].value
+                    s +=', '
+                }
+            }
+            list.innerText = s
+        })
+
+    </script>
+</body>
+
+</html>
